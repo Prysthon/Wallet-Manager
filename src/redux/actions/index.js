@@ -5,3 +5,11 @@ export default function saveEmail(payload) {
     payload,
   };
 }
+
+export const SAVE_CURRENCIES = 'SAVE_CURRENCIES';
+export function saveCurrencies(payload) {
+  return {
+    type: SAVE_CURRENCIES,
+    payload,
+  };
+}
