@@ -22,7 +22,7 @@ class WalletForm extends Component {
           <label htmlFor="value-input">
             valor:
             <input
-              type="text"
+              type="number"
               name="value-input"
               id="value-input"
               data-testid="value-input"
