@@ -13,3 +13,21 @@ export function saveCurrencies(payload) {
     payload,
   };
 }
+
+export const ADD_EXPENSES = 'SAVE_EXPENSES';
+function saveExpenses(expenses) {
+  return {
+    type: ADD_EXPENSES,
+    expenses,
+  };
+}
+
+export function fetchExchangeRates(state) {
+  return async (dispatch) => {
+    const url = 'https://economia.awesomeapi.com.br/json/all';
+    const request = await fetch(url);
+    const response = await request.json();
+    state.exchangeRates = response;
+    dispatch(saveExpenses(state));
+  };
+}
