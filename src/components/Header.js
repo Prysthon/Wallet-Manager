@@ -24,7 +24,7 @@ class Header extends Component {
       <div>
         <h2 data-testid="email-field">{ email }</h2>
         <p data-testid="total-field">
-          { values.length === 0 ? expenses : this.totalExpenses() }
+          { values.length === 0 ? expenses.toFixed(2) : this.totalExpenses() }
         </p>
         <p data-testid="header-currency-field">{ cambio }</p>
       </div>
@@ -39,7 +39,6 @@ const mapStateToProps = (state) => ({
 
 Header.propTypes = {
   email: PropTypes.string.isRequired,
-  // values: PropTypes.shape([{}]).isRequired,
   values: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 

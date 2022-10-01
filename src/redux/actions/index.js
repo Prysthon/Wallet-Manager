@@ -31,3 +31,11 @@ export function fetchExchangeRates(state) {
     dispatch(saveExpenses(state));
   };
 }
+
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
+export function deleteExpense(id) {
+  return {
+    type: DELETE_EXPENSE,
+    id,
+  };
+}
